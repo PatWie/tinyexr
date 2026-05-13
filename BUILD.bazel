@@ -1,0 +1,16 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+cc_library(
+    name = "tinyexr",
+    hdrs = ["tinyexr.h"],
+    includes = ["."],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "miniz",
+    srcs = ["deps/miniz/miniz.c"],
+    hdrs = ["deps/miniz/miniz.h"],
+    includes = ["deps/miniz"],
+    visibility = ["//visibility:public"],
+)
