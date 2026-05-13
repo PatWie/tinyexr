@@ -2,7 +2,7 @@ load("@rules_cc//cc:defs.bzl", "cc_library")
 
 cc_library(
     name = "tinyexr",
-    hdrs = ["tinyexr.h"],
+    hdrs = glob(["*.h", "*.hh"]),
     includes = ["."],
     visibility = ["//visibility:public"],
 )
